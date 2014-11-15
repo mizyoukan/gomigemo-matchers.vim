@@ -1,0 +1,71 @@
+*gomigemo-matchers.vim*		Go/Migemo matchers
+
+Author: Tamaki Mizuha <mizyoukan@outlook.com>
+Last Modified: 15 November 2014
+License: NYSL Version 0.9982 {{{
+    A. 本ソフトウェアは Everyone'sWare です。このソフトを手にした一人一人が、
+       ご自分の作ったものを扱うのと同じように、自由に利用することが出来ます。
+
+       A-1. フリーウェアです。作者からは使用料等を要求しません。
+       A-2. 有料無料や媒体の如何を問わず、自由に転載・再配布できます。
+       A-3. いかなる種類の 改変・他プログラムでの利用 を行っても構いません。
+       A-4. 変更したものや部分的に使用したものは、あなたのものになります。
+           公開する場合は、あなたの名前の下で行って下さい。
+
+    B. このソフトを利用することによって生じた損害等について、作者は
+       責任を負わないものとします。各自の責任においてご利用下さい。
+
+    C. 著作者人格権は Tamaki Mizuha に帰属します。著作権は放棄します。
+
+    D. 以上の３項は、ソース・実行バイナリの双方に適用されます。
+}}}
+
+==============================================================================
+目次				*gomigemo-matchers-contents*
+
+概要				|gomigemo-matchers-introduction|
+使用条件			|gomigemo-matchers-requirements|
+使用方法			|gomigemo-matchers-usage|
+更新履歴			|gomigemo-matchers-history|
+
+==============================================================================
+概要				*gomigemo-matchers-introduction*
+
+*gomigemo-matchers.vim* は、Go/Migemo を使用して Unite.vim または ctrlp.vim の
+フィルタリングを行うプラグインです。
+
+==============================================================================
+使用条件			*gomigemo-matchers-requirements*
+
+- 次のプラグインがインストールされていること。
+    - vimproc.vim <https://github.com/Shougo/vimproc.vim>
+
+- gmigemoが実行可能であること。
+  gmigemoはGo言語のインストール環境が存在する上で、
+  以下のコマンドの実行によりインストールが可能です。
+
+    $ go get -u github.com/koron/gomigemo/cmd/gmigemo
+
+==============================================================================
+使用方法			*gomigemo-matchers-usage*
+
+autoload フォルダ以下のファイルを runtimepath に追加します。
+
+.vimrc に以下を追加します。
+
+Unite.vim で使用する場合の設定例:
+
+    call unite#custom#source('file', 'matchers', 'matcher_gomigemo')
+
+ctrlp.vim で使用する場合の設定例:
+
+    let g:ctrlp_match_func = {'match': 'g:ctrlp#matcher#gomigemo#match'}
+
+==============================================================================
+更新履歴			*gomigemo-matchers-history*
+
+0.1.0				2014-11-15
+				- 初版。
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:noet:
