@@ -1,4 +1,4 @@
-*gomigemo-matchers.txt*	unite、ctrlp を Go/Migemo でフィルタリング
+*gomigemo-matchers.jax*	unite、ctrlp を Go/Migemo でフィルタリング
 
 Author: Tamaki Mizuha <mizyoukan@outlook.com>
 Last Modified: 24 February 2015
@@ -31,7 +31,7 @@ License: NYSL Version 0.9982 {{{
 ==============================================================================
 概要				*gomigemo-matchers-introduction*
 
-*gomigemo-matchers.vim* は、Go/Migemo を使用して unite.vim および ctrlp.vim の
+*gomigemo-matchers* は、Go/Migemo を使用して unite.vim および ctrlp.vim の
 フィルタリングを行う機能を提供します。
 
 ==============================================================================
