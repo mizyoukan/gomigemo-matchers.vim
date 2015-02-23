@@ -1,7 +1,7 @@
-*gomigemo-matchers.vim*		Go/Migemo matchers
+*gomigemo-matchers.vim*	unite、ctrlp を Go/Migemo でフィルタリング
 
 Author: Tamaki Mizuha <mizyoukan@outlook.com>
-Last Modified: 15 November 2014
+Last Modified: 24 February 2015
 License: NYSL Version 0.9982 {{{
     A. 本ソフトウェアは Everyone'sWare です。このソフトを手にした一人一人が、
        ご自分の作ったものを扱うのと同じように、自由に利用することが出来ます。
@@ -31,8 +31,8 @@ License: NYSL Version 0.9982 {{{
 ==============================================================================
 概要				*gomigemo-matchers-introduction*
 
-*gomigemo-matchers.vim* は、Go/Migemo を使用して Unite.vim または ctrlp.vim の
-フィルタリングを行うプラグインです。
+*gomigemo-matchers.vim* は、Go/Migemo を使用して unite.vim および ctrlp.vim の
+フィルタリングを行う機能を提供します。
 
 ==============================================================================
 使用条件			*gomigemo-matchers-requirements*
@@ -40,8 +40,8 @@ License: NYSL Version 0.9982 {{{
 - 次のプラグインがインストールされていること。
     - vimproc.vim <https://github.com/Shougo/vimproc.vim>
 
-- gmigemoが実行可能であること。
-  gmigemoはGo言語のインストール環境が存在する上で、
+- gmigemo が実行可能であること。
+  gmigemo はGo言語のインストール環境が存在する上で、
   以下のコマンドの実行によりインストールが可能です。
 
     $ go get -u github.com/koron/gomigemo/cmd/gmigemo
@@ -53,7 +53,7 @@ autoload フォルダ以下のファイルを runtimepath に追加します。
 
 .vimrc に以下を追加します。
 
-Unite.vim で使用する場合の設定例:
+unite.vim で使用する場合の設定例:
 
     call unite#custom#source('file', 'matchers', 'matcher_gomigemo')
 
