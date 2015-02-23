@@ -1,4 +1,4 @@
-*gomigemo-matchers.vim*	unite、ctrlp を Go/Migemo でフィルタリング
+*gomigemo-matchers.jax*	unite、ctrlp を Go/Migemo でフィルタリング
 
 Author: Tamaki Mizuha <mizyoukan@outlook.com>
 Last Modified: 24 February 2015
@@ -41,8 +41,8 @@ License: NYSL Version 0.9982 {{{
     - vimproc.vim <https://github.com/Shougo/vimproc.vim>
 
 - gmigemo が実行可能であること。
-  gmigemo はGo言語のインストール環境が存在する上で、
-  以下のコマンドの実行によりインストールが可能です。
+  gmigemo はGo言語のインストール環境が存在する上で、以下のコマンドの実行により
+  インストールが可能です。
 
     $ go get -u github.com/koron/gomigemo/cmd/gmigemo
 
