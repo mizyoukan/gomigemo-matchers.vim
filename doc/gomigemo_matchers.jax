@@ -59,10 +59,13 @@ unite.vim で使用する場合の設定例:
 
 ctrlp.vim で使用する場合の設定例:
 
-    let g:ctrlp_match_func = {'match': 'g:ctrlp#matcher#gomigemo#match'}
+    let g:ctrlp_match_func = {'match': 'ctrlp#matcher#gomigemo#match'}
 
 ==============================================================================
 更新履歴			*gomigemo-matchers-history*
+
+0.1.1				2015-02-24
+				- ctrlp.vim 用の matcher 関数から g: を除去。
 
 0.1.0				2014-11-15
 				- 初版。

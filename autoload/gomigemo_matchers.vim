@@ -1,6 +1,6 @@
 " File: autoload/gomigemo_matchers.vim
 " Author: Tamaki Mizuha <mizyoukan@outlook.com>
-" Last Modified: 15 Novemver 2014
+" Last Modified: 24 February 2015
 " License: NASL
 
 let s:save_cpo = &cpo
@@ -8,7 +8,7 @@ set cpo&vim
 
 let s:P = vital#of('gomigemo_matchers').import('ProcessManager')
 
-function! g:gomigemo_matchers#pattern(str)
+function! gomigemo_matchers#pattern(str)
   let s:p = s:P.of('migemo', 'gmigemo')
   if s:p.is_new()
     call s:p.reserve_wait(['QUERY: '])
@@ -33,8 +33,8 @@ function! g:gomigemo_matchers#pattern(str)
     \ 'utf-8', &encoding)
 endfunction
 
-function! g:gomigemo_matchers#pattern_vim(str)
-  let l:re = g:gomigemo_matchers#pattern(a:str)
+function! gomigemo_matchers#pattern_vim(str)
+  let l:re = gomigemo_matchers#pattern(a:str)
   " Go regexp pattern -> Vim regexp pattern
   let l:re = substitute(l:re, '(?:', '(', 'g')
   let l:re = substitute(l:re, '[\(\)\|]', '\\\0', 'g')

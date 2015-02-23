@@ -17,7 +17,7 @@ for unite.vim:
 
 for ctrlp.vim:
 
-    let g:ctrlp_match_func = {'match': 'g:ctrlp#matcher#gomigemo#match'}
+    let g:ctrlp_match_func = {'match': 'ctrlp#matcher#gomigemo#match'}
 
 
 ## License
