@@ -1,6 +1,6 @@
-# gomigemo-matchers.vim: Go/Migemo matchers for Vim
+# gomigemo-matchers.vim: Go/Migemo matchers for Vim search plugins
 
-[Go/Migemo][gomigemo] matcher for [Unite.vim] or [ctrlp.vim]
+[Go/Migemo][gomigemo] matcher for [unite.vim] and [ctrlp.vim]
 
 ## Requirement
 
@@ -10,7 +10,7 @@
 
 ## Usage
 
-for Unite.vim:
+for unite.vim:
 
     call unite#custom#source('file', 'matchers', 'matcher_gomigemo')
 
