@@ -8,7 +8,7 @@ set cpo&vim
 
 let s:P = vital#of('gomigemo_matchers').import('ProcessManager')
 
-function! gomigemo_matchers#pattern(str)
+function! gomigemo_matchers#pattern(str) abort
   let s:p = s:P.of('migemo', 'gmigemo')
   if s:p.is_new()
     call s:p.reserve_wait(['QUERY: '])
@@ -33,7 +33,7 @@ function! gomigemo_matchers#pattern(str)
     \ 'utf-8', &encoding)
 endfunction
 
-function! gomigemo_matchers#pattern_vim(str)
+function! gomigemo_matchers#pattern_vim(str) abort
   let l:re = gomigemo_matchers#pattern(a:str)
   " Go regexp pattern -> Vim regexp pattern
   let l:re = substitute(l:re, '(?:', '(', 'g')

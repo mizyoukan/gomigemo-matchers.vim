@@ -3,7 +3,7 @@
 " Last Modified: 24 February 2015
 " License: NASL
 
-function! s:matches(items, str)
+function! s:matches(items, str) abort
   let l:items = deepcopy(a:items)
 
   for l:str in split(a:str)
@@ -14,7 +14,7 @@ function! s:matches(items, str)
   return l:items
 endfunction
 
-function! ctrlp#matcher#gomigemo#match(items, str, limit, mmode, ispath, crfile, regex)
+function! ctrlp#matcher#gomigemo#match(items, str, limit, mmode, ispath, crfile, regex) abort
   if !executable('gmigemo')
     " Not supported.
     return a:items[:a:limit-1]

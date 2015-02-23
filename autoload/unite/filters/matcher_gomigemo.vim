@@ -6,7 +6,7 @@
 let s:save_cpo = &cpo
 set cpo&vim
 
-function! unite#filters#matcher_gomigemo#define()
+function! unite#filters#matcher_gomigemo#define() abort
   if !executable('gmigemo')
     " Not supported.
     return {}
@@ -20,7 +20,7 @@ let s:matcher = {
   \   'description': 'gomigemo matcher'
   \ }
 
-function! s:matcher.filter(candidates, context)
+function! s:matcher.filter(candidates, context) abort
   if a:context.input =~ '^\s*$'
     return unite#filters#filter_matcher(a:candidates, '', a:context)
   endif
@@ -51,7 +51,7 @@ function! s:matcher.filter(candidates, context)
   return l:candidates
 endfunction
 
-function! s:matcher.pattern(input)
+function! s:matcher.pattern(input) abort
   return g:gomigemo_matchers#pattern_vim(a:input)
 endfunction
 
