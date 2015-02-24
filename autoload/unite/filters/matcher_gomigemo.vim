@@ -1,6 +1,6 @@
 " File: autoload/unite/filters/matcher_gomigemo.vim
 " Author: Tamaki Mizuha <mizyoukan@outlook.com>
-" Last Modified: 15 Novemver 2014
+" Last Modified: 24 February 2015
 " License: NASL
 
 let s:save_cpo = &cpo
