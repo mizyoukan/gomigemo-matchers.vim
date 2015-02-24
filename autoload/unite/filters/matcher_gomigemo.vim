@@ -21,22 +21,22 @@ let s:matcher = {
   \ }
 
 function! s:matcher.filter(candidates, context) abort
-  if a:context.input =~ '^\s*$'
+  if a:context.input =~# '^\s*$'
     return unite#filters#filter_matcher(a:candidates, '', a:context)
   endif
 
   let l:candidates = a:candidates
 
   for l:input in a:context.input_list
-    if l:input =~ '^\s*$'
+    if l:input =~# '^\s*$'
       continue
-    elseif l:input =~ '^!'
-      if l:input == '!'
+    elseif l:input =~# '^!'
+      if l:input ==# '!'
         continue
       endif
       " Exclusion match.
       let l:pattern = g:gomigemo_matchers#pattern_vim(l:input[1:])
-    elseif l:input =~ '^:'
+    elseif l:input =~# '^:'
       " Executes command.
       let a:context.execute_command = l:input[1:]
       continue
@@ -45,7 +45,7 @@ function! s:matcher.filter(candidates, context) abort
     endif
 
     let l:candidates = unite#filters#filter_matcher(
-      \ l:candidates, 'v:val.word =~ ' . string(l:pattern), a:context)
+      \ l:candidates, 'v:val.word =~# ' . string(l:pattern), a:context)
   endfor
 
   return l:candidates

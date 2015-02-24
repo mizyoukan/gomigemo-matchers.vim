@@ -20,7 +20,7 @@ function! ctrlp#matcher#gomigemo#match(items, str, limit, mmode, ispath, crfile,
     return a:items[:a:limit-1]
   endif
 
-  if a:str =~ '^\s*$'
+  if a:str =~# '^\s*$'
     return a:items[:a:limit-1]
   endif
 
